@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flatpickr.min.css">
+    <link rel="stylesheet" href="Font-Awesome-4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="flatpickr.js"></script>
+    <script src="luxon.min.js"></script>
+</head>
+<body>
+    <div class="tabs">
+        <button id="home-tab" class="tab">Home</button>
+        <button id="archive-tab" class="tab">Archive</button>
+        <button id="export-btn" class="green-btn">Export Data</button>
+        <button id="import-btn" class="green-btn">Load Data</button>
+        <label for="search-data">Search per Categories (optionally comma separated):</label>
+        <input type="text" id="search-data"><br>
+        List of categories at Home: <font color="blue"><span id="list-of-categories-home"></span></font><br>
+        List of categories at Archive: <font color="blue"><span id="list-of-categories-archive"></span></font>
+    </div>
+
+    <div id="home" class="tab-content">
+        <h2>Home</h2>
+        <form id="activity-form">
+            Date & Time:
+            <div class="input-container">
+                <span class="fa fa-calendar icon"></span>
+                <input type="text" id="datetime" placeholder="Select Date and Time" required>
+            </div>
+            <br>
+            <label for="category">Category:</label>
+            <input type="text" id="category" required>
+            <br>
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            <br>
+            <label for="content">Content:</label>
+            <textarea id="content" required></textarea>
+            <br>
+            <button type="submit">Add Activity</button>
+        </form>
+        <div id="activity-list"></div>
+    </div>
+
+    <div id="archive" class="tab-content" style="display: none;">
+        <h2>Archive</h2>
+        <div id="archive-list"></div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <h2>Edit Activity</h2>
+            <form id="edit-form">
+                Date & Time:
+                <div class="input-container">
+                    <span class="fa fa-calendar icon"></span>
+                    <input type="text" id="edit-datetime" placeholder="Select Date and Time" required>
+                </div>                
+                <br>
+                <label for="edit-category">Category:</label>
+                <input type="text" id="edit-category" required>
+                <br>
+                <label for="edit-title">Title:</label>
+                <input type="text" id="edit-title" required>
+                <br>
+                <label for="edit-content">Content:</label>
+                <textarea id="edit-content" required></textarea>
+                <br>
+                <button id="save-btn" type="button">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <input type="file" id="file-input" style="display:none">
+
+    <script src="script.js"></script>
+</body>
+</html>
