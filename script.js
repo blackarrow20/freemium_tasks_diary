@@ -343,7 +343,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 listOfCategories.push(activity.category);
             }
         });
-        $("#list-of-categories-home").text(listOfCategories.join(', '));
+        if (listOfCategories.length == 0) {
+            $("#list-of-categories-home").text("No categories at home for now, please add some activities...");
+        } else {
+            $("#list-of-categories-home").text(listOfCategories.join(', '));
+        }
         
         activities = JSON.parse(localStorage.getItem("archiveActivities")) || [];
         activities.sort((a, b) => a.datetime - b.datetime);
@@ -353,7 +357,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 listOfCategories.push(activity.category);
             }
         });
-        $("#list-of-categories-archive").text(listOfCategories.join(', '));
+        if (listOfCategories.length == 0) {
+            $("#list-of-categories-archive").text("No categories at archive for now, please add some activities...");
+        } else {
+            $("#list-of-categories-archive").text(listOfCategories.join(', '));
+        }        
     }
     
     displaySavedActivities();
