@@ -61,14 +61,16 @@ var fp_datetime = flatpickr("#datetime", {
     enableTime: true,
     time_24hr: true,
     dateFormat: flatpickrDateFormat,
-    enableSeconds: true
+    enableSeconds: true,
+    disableMobile: true
 });
 
 var fp_datetime_edit = flatpickr("#edit-datetime", {
     enableTime: true,
     time_24hr: true,
     dateFormat: flatpickrDateFormat,
-    enableSeconds: true
+    enableSeconds: true,
+    disableMobile: true
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -145,7 +147,8 @@ document.addEventListener("DOMContentLoaded", function() {
             enableTime: true,
             time_24hr: true,
             dateFormat: flatpickrDateFormat,
-            enableSeconds: true
+            enableSeconds: true,
+            disableMobile: true
         });
         titleInput.value = activity.title;
         contentInput.value = activity.content;
