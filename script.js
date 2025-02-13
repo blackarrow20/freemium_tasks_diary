@@ -340,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         if (listOfCategories.length == 0) {
-            $("#list-of-categories-home").text("No categories at home for now, please add some activities...");
+            $("#list-of-categories-home").text("No categories...");
         } else {
             $("#list-of-categories-home").text(listOfCategories.join(', '));
         }
@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         if (listOfCategories.length == 0) {
-            $("#list-of-categories-archive").text("No categories at archive for now, please add some activities...");
+            $("#list-of-categories-archive").text("No categories...");
         } else {
             $("#list-of-categories-archive").text(listOfCategories.join(', '));
         }        
