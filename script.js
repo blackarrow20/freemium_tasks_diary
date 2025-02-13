@@ -142,14 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const contentInput = document.getElementById("edit-content");
         const categoryInput = document.getElementById("edit-category");
 
-        datetimeInput.value = convertTimestampToString(activity.datetime, timezone, luxonDateformat);
-        fp_datetime_edit = flatpickr("#edit-datetime", {
-            enableTime: true,
-            time_24hr: true,
-            dateFormat: flatpickrDateFormat,
-            enableSeconds: true,
-            disableMobile: true
-        });
+        fp_datetime_edit.setDate(convertTimestampToString(activity.datetime, timezone, luxonDateformat), true);
         titleInput.value = activity.title;
         contentInput.value = activity.content;
         categoryInput.value = activity.category;
