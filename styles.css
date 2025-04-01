@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light gray background color */
+    background-color: #eeeeee; /* Light gray background color */
 }
 
 form {
@@ -14,15 +14,61 @@ label {
 
 input[type="datetime-local"] {
     width: 200px;
-    padding: 8px;
-    margin-bottom: 10px;
 }
 
-input[type="text"],
-textarea {
+input.greenish, select.greenish {
+    display: inline-block !important;
+    margin-top: 3px;
     width: 95%;
     padding: 8px;
     margin-bottom: 10px;
+    box-sizing: content-box;
+    
+    border: 1px solid #8484c4;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    box-shadow: 0px 0px 7px #56ab2f;
+    -moz-box-shadow: 0px 0px 7px #56ab2f;
+    -webkit-box-shadow: 0px 0px 7px #56ab2f;
+}
+
+input.greenish:focus, select.greenish:focus {
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 7px #83f0c8;
+    -moz-box-shadow: 0px 0px 7px #83f0c8;
+    -webkit-box-shadow: 0px 0px 7px #83f0c8;
+}
+    
+textarea.greenish {
+    margin-top: 3px;
+    box-sizing: border-box;
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: content-box;
+    resize: vertical;
+    
+    border: 1px solid #8484c4;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    box-shadow: 0px 0px 7px #56ab2f;
+    -moz-box-shadow: 0px 0px 7px #56ab2f;
+    -webkit-box-shadow: 0px 0px 7px #56ab2f;
+}
+
+textarea.greenish:focus {
+    outline: none;
+    box-sizing: content-box;
+    border: 1px solid #8484c4;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    box-shadow: 0px 0px 7px #83f0c8;
+    -moz-box-shadow: 0px 0px 7px #83f0c8;
+    -webkit-box-shadow: 0px 0px 7px #83f0c8;
 }
 
 button {
@@ -69,7 +115,7 @@ button:hover {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #dddddd;
     margin: auto; /* Center horizontally */
     margin-top: 5%; /* Adjust the top margin to center vertically */
     padding: 20px;
@@ -103,7 +149,7 @@ button:hover {
 
 .input-container .icon {
     position: absolute;
-    top: 38%;
+    top: 42%;
     left: 10px; /* Position the icon inside the input field on the left */
     transform: translateY(-50%);
     pointer-events: none; /* Prevent the icon from blocking clicks */

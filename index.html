@@ -18,7 +18,7 @@
         <button id="export-btn" class="green-btn">Export Data</button>
         <button id="import-btn" class="green-btn">Load Data</button>
         <label for="search-data">Search per Categories (optionally comma separated):</label>
-        <input type="text" id="search-data"><br>
+        <input type="text" class="greenish" id="search-data"><br>
         List of categories at Home: <font color="blue"><span id="list-of-categories-home"></span></font><br>
         List of categories at Archive: <font color="blue"><span id="list-of-categories-archive"></span></font>
     </div>
@@ -29,17 +29,17 @@
             Date & Time:
             <div class="input-container">
                 <span class="fa fa-calendar icon"></span>
-                <input type="text" id="datetime" placeholder="Select Date and Time" required>
+                <input type="text" id="datetime" placeholder="Select Date and Time" class="greenish" required>
             </div>
             <br>
             <label for="category">Category:</label>
-            <input type="text" id="category" required placeholder="Enter a category, usually a single word">
+            <input type="text" id="category" class="greenish" required placeholder="Enter a category, usually a single word">
             <br>
             <label for="title">Title:</label>
-            <input type="text" id="title" required placeholder="Enter a title">
+            <input type="text" id="title" class="greenish" required placeholder="Enter a title">
             <br>
             <label for="content">Content:</label>
-            <textarea id="content" required placeholder="Describe your activity in more details"></textarea>
+            <textarea id="content" class="greenish" required placeholder="Describe your activity in more details"></textarea>
             <br>
             <button type="submit">Add Activity</button>
         </form>
@@ -59,17 +59,17 @@
                 Date & Time:
                 <div class="input-container">
                     <span class="fa fa-calendar icon"></span>
-                    <input type="text" id="edit-datetime" placeholder="Select Date and Time" required>
+                    <input type="text" id="edit-datetime" class="greenish" placeholder="Select Date and Time" required>
                 </div>                
                 <br>
                 <label for="edit-category">Category:</label>
-                <input type="text" id="edit-category" required>
+                <input type="text" id="edit-category" class="greenish" required>
                 <br>
                 <label for="edit-title">Title:</label>
-                <input type="text" id="edit-title" required>
+                <input type="text" id="edit-title" class="greenish" required>
                 <br>
                 <label for="edit-content">Content:</label>
-                <textarea id="edit-content" required></textarea>
+                <textarea id="edit-content" class="greenish" required></textarea>
                 <br>
                 <button id="save-btn" type="button">Save</button>
             </form>
