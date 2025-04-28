@@ -1,11 +1,11 @@
-function convertLuxonToFlatpickr(date, timezone, format) {
+function convertLuxonToString(date, timezone, format) {
     const dateFormatted = date.setZone(timezone).toFormat(format);
     return dateFormatted;
 }
 
 function convertTimestampToString(timestamp, timezone, luxonDateformat) {
     const now = DateTime.fromMillis(timestamp * 1000).setZone(timezone);
-    var nowString = convertLuxonToFlatpickr(now, timezone, luxonDateformat);
+    var nowString = convertLuxonToString(now, timezone, luxonDateformat);
     return nowString;
 }
 
@@ -55,7 +55,7 @@ var luxonDateformat = convertToLuxonDateFormat(dateFormat);
 var flatpickrDateFormat = convertToFlatpickrDateFormat(dateFormat);
 const { DateTime } = luxon;
 const now = DateTime.fromMillis(currentTime * 1000).setZone(timezone);
-var nowString = convertLuxonToFlatpickr(now, timezone, luxonDateformat);
+var nowString = convertLuxonToString(now, timezone, luxonDateformat);
     
 var fp_datetime = flatpickr("#datetime", {
     enableTime: true,
