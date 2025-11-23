@@ -9,4 +9,4 @@ Simple localStorage-based activity manager. You can add activities with dates an
 
 ---
 
-💡 *More features coming soon! Stay tuned.* 🚀
+💡 *Premium version with more features coming soon! Stay tuned.* 🚀
